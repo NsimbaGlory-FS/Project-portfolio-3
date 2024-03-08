@@ -2,7 +2,7 @@
 
 This project uses the Spotify Web API to perform a generalized global search for Artists, Albums, and Tracks. This project contains both a frontend and a backend in a microservice structure that keeps track of OAuth JSON web tokens. This project serves as a template for other projects inside of the Project Portfolio III course. DO NOT COPY.
 
-### Prerequisites
+# Prerequisites
 
 Docker Engine >= latest (for Mac or other platform)
 NodeJS >= v16.13.0
@@ -14,12 +14,13 @@ Chrome/Firefox/Safari/Edge >= Latest 2 major versions
 
 ## Other Considerations
 
-Ports 3000, and 3001 must be open on host OS. Make sure no other applications are running on those ports by running the following command:
+Ports 3000, and 3001 must be open on host OS. Make sure no other applications are running on those ports by
+running the following command:
 
 sudo lsof -nP -i4TCP:3000 | grep LISTEN && sudo lsof -nP -i4TCP:3001 | grep LISTEN
 If any results shows are displayed then you must close the application running on either of those ports.
 
-### Getting Started
+# Getting Started
 
 In order to setup the project we will need to setup our .env file. You can do this by making a copy of our .env.dist and naming it to .env using the following command.
 
@@ -30,15 +31,16 @@ npm install -g yarn
 yarn
 After yarn has finished installing all of your node_modules you can now run the project. You will need to open two different bash sessions. One for the frontend app and one for the backend Express application.
 
-To Run Nuxt.js (frontend)
+### To Run Nuxt.js (frontend)
 
 cd nuxt
 yarn dev
-To Run Express (backend)
+
+### To Run Express (backend)
 
 yarn watch
 
-### Links
+# Links
 
 The links to the project are as follows:
 
