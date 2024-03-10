@@ -1,79 +1,17 @@
-# Project-portfolio-3
+Project-portfolio-3
 
 This project uses the Spotify Web API to perform a generalized global search for Artists, Albums, and Tracks. This project contains both a frontend and a backend in a microservice structure that keeps track of OAuth JSON web tokens. This project serves as a template for other projects inside of the Project Portfolio III course. DO NOT COPY.
 
-# Prerequisites
+## Getting Started
 
-Docker Engine >= latest (for Mac or other platform)
-NodeJS >= v16.13.0
-Yarn >= v1.22.19
-npm >= v8.1.0
-Brew >= v3.4.3 (if MacOS)
-MySQL Server >= v8.0.28
-Chrome/Firefox/Safari/Edge >= Latest 2 major versions
+To get started all I need to do is install NodeJS v16. then run the following
+npm run watch
 
-## Other Considerations
+To get started all I need to do is install express mongoose detenv nodemon following
 
-Ports 3000, and 3001 must be open on host OS. Make sure no other applications are running on those ports by
-running the following command:
+npm i express mongoose dotenv nodemon
 
-sudo lsof -nP -i4TCP:3000 | grep LISTEN && sudo lsof -nP -i4TCP:3001 | grep LISTEN
-If any results shows are displayed then you must close the application running on either of those ports.
-
-# Getting Started
-
-In order to setup the project we will need to setup our .env file. You can do this by making a copy of our .env.dist and naming it to .env using the following command.
-
-cp .env.dist .env && vim .env
-Place all of your environment variables inside the vim window, then save. After you have done that you will need to install all of your node_modules using the following command. Make sure you have yarn installed globally as well.
-
-npm install -g yarn
-yarn
-After yarn has finished installing all of your node_modules you can now run the project. You will need to open two different bash sessions. One for the frontend app and one for the backend Express application.
-
-### To Run Nuxt.js (frontend)
-
-cd nuxt
-yarn dev
-
-### To Run Express (backend)
-
-yarn watch
-
-# Links
-
-The links to the project are as follows:
-
-http://localhost:3000 - Link to the frontend (Nuxt.js) application. This is the primary user interface of the Spotify application
-http://localhost:3001 - Link to the backend (Express) API.
-http://localhost:3001/spotify/v1 - Link to the Spotify API middleware.
-http://localhost:3001/spotify/v1/status - Endpoint to check the status of our application's JWT. Returns true if a valid JWT exists. False otherwise.
-http://localhost:3001/spotify/v1/login - Endpoint request a new JWT from Spotify using the authentication workflow
-http://localhost:3001/spotify/v1/search - Endpoint for a general/global search to Spotify. Returns JSON of all results.
-About
-Project template for Project Portfolio III
-
-Resources
-Readme
-Activity
-Stars
-0 stars
-Watchers
-1 watching
-Forks
-1 fork
-Report repository
-Releases
-No releases published
-Packages
-No packages published
-Languages
-Vue
-56.1%
-
-JavaScript
-36.8%
-
-CSS
-7.1%
-Footer
+"dotenv": "^16.4.5",
+"express": "^4.18.3",
+"mongoose": "^8.2.1",
+"nodemon": "^3.1.0"
