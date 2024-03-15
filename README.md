@@ -26,4 +26,4 @@ npm i express mongoose dotenv nodemon
 
 ## Links - This section of your README contains a list of important links such as local build URLs such as localhost:3000, staging links, etc.
 
-http://localhost:8000/
+http://localhost:3000/
