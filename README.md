@@ -15,6 +15,10 @@ npm i express mongoose dotenv nodemon
 "express": "^4.18.3",
 "mongoose": "^8.2.1",
 "nodemon": "^3.1.0"
+"joi-password-complexity": "^5.2.0",
+"jsonwebtoken": "^9.0.2",
+
+    
 
 ## Project Overview - This section of your README should contain the description of your project, features, and functionality.
 
@@ -22,4 +26,4 @@ npm i express mongoose dotenv nodemon
 
 ## Links - This section of your README contains a list of important links such as local build URLs such as localhost:3000, staging links, etc.
 
-http://localhost:3000/
+http://localhost:8000/
