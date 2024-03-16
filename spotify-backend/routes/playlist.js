@@ -62,7 +62,7 @@ router.get(
 
     const artist = await User.findOne({ _id: artistId });
     if (!artist) {
-      return res.status(304).json({ err: "Invalid Artist ID" });
+      return res.status(304).json({ err: "Invalid current Artist ID" });
     }
 
     const playlists = await Playlist.find({ owner: artistId });
@@ -79,19 +79,21 @@ router.post(
 
     const playlist = await Playlist.findOne({ _id: playlistId });
     if (!playlist) {
-      return res.status(304).json({ err: "Playlist does not exist" });
+      return res.status(304).json({ err: "Playlist is not exist on the site" });
     }
 
     if (
       !playlist.owner.equals(currentUser._id) &&
       !playlist.collaborators.includes(currentUser._id)
     ) {
-      return res.status(400).json({ err: "Not allowed" });
+      return res.status(400).json({ err: "Not allowed on play list" });
     }
 
     const song = await Song.findOne({ _id: songId });
     if (!song) {
-      return res.status(304).json({ err: "Song does not exist" });
+      return res
+        .status(304)
+        .json({ err: "Song is not exist on the plays list" });
     }
 
     playlist.songs.push(songId);
