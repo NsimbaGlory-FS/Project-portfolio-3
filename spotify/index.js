@@ -1,15 +1,24 @@
 require("dotenv").config();
+require("express-async-errors");
 const express = require("express");
-// const cors = require("cors");
+const cors = require("cors");
+const connection = require("./db");
+const userRoutes = require("./routes/users");
+const authRoutes = require("./routes/auth");
+const songRoutes = require("./routes/songs");
+const playListRoutes = require("./routes/playLists");
+const searchRoutes = require("./routes/search");
 const app = express();
-console.log("------Env var-----");
-console.log(process.env);
-console.log("------Env var-----");
-// const bodyParser = require("body-parser");
-// const spotify = require("./middlewares/spotify");
-// app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(cors());
 
-// app.use("/spotify/v1", spotify);
+connection();
+app.use(cors());
+app.use(express.json());
 
-app.listen(3000);
+app.use("/api/users/", userRoutes);
+app.use("/api/login/", authRoutes);
+app.use("/api/songs/", songRoutes);
+app.use("/api/playlists/", playListRoutes);
+app.use("/api/", searchRoutes);
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Listening on port ${port}...`));
