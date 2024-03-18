@@ -7,7 +7,7 @@ const Login = () => {
         className="text-white px-8 py-2 rounded-full bg-green-500 font-bold text-lg"
         onClick={() => signIn("spotify", { callbackUrl: "/" })}
       >
-        Login with spotify
+        Login to Spotify
       </button>
     </div>
   );
