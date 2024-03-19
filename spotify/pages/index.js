@@ -1,7 +1,7 @@
 // import Artist from "@/components/Artist";
 // import Library from "@/components/Library";
-import Player from "../components/Player";
-import PlaylistView from "../components/PlaylistView";
+// import Player from "../components/Player";
+// import PlaylistView from "../components/PlaylistView";
 // import Search from "@/components/Search";
 import Sidebar from "../components/Sidebar";
 import { useSession } from "next-auth/react";
@@ -23,7 +23,7 @@ export default function Home() {
             setView={setView}
             setGlobalPlaylistId={setGlobalPlaylistId}
           />
-          {view === "playlist" && (
+          {/* {view === "playlist" && (
             <PlaylistView
               setView={setView}
               setGlobalArtistId={setGlobalArtistId}
@@ -63,7 +63,7 @@ export default function Home() {
             setGlobalCurrentSongId={setGlobalCurrentSongId}
             setGlobalIsTrackPlaying={setGlobalIsTrackPlaying}
             globalIsTrackPlaying={globalIsTrackPlaying}
-          />
+          /> */}
         </div>
       </main>
     </>
