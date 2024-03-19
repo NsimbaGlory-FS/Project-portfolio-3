@@ -1,9 +1,9 @@
-import Artist from "@/components/Artist";
-import Library from "@/components/Library";
-import Player from "@/components/Player";
-import PlaylistView from "@/components/PlaylistView";
-import Search from "@/components/Search";
-import Sidebar from "@/components/Sidebar";
+// import Artist from "@/components/Artist";
+// import Library from "@/components/Library";
+import Player from "../components/Player";
+import PlaylistView from "../components/PlaylistView";
+// import Search from "@/components/Search";
+import Sidebar from "../components/Sidebar";
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 
