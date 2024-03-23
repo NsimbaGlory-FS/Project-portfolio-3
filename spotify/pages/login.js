@@ -12,7 +12,7 @@ const Login = () => {
           alt="spotify"
           width={900}
         ></img>
-        Login to Spotify
+        sign In
       </button>
     </div>
   );

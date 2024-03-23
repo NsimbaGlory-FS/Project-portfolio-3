@@ -46,7 +46,8 @@ const Player = ({
   async function handlePlayPause() {
     if (session && session.accessToken) {
       const data = await getCurrentlyPlaying();
-      if (data.is_playing) {
+
+      if (data.s_playing) {
         const response = await fetch(
           "https://api.spotify.com/v1/me/player/pause",
           {
@@ -83,7 +84,7 @@ const Player = ({
         if (!globalCurrentSongId) {
           const data = await getCurrentlyPlaying();
           setGlobalCurrentSongId(data?.item?.id);
-          if (data.is_playing) {
+          if (data_is_playing) {
             setGlobalIsTrackPlaying(true);
           }
           await fetchSongInfo(data?.item?.id);
