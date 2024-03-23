@@ -73,7 +73,11 @@ const PlaylistView = ({
       >
         <div style={{ opacity: textOpacity }} className="flex items-center">
           {playlistData && (
-            <img className="h-8 w-8 mr-6" src={playlistData.images[0].url} />
+            <img
+              className="h-44 w-44"
+              src="https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228"
+              width={400}
+            ></img>
           )}
           <p>{playlistData?.name}</p>
         </div>
@@ -82,11 +86,6 @@ const PlaylistView = ({
         onClick={() => signOut()}
         className="absolute z-20 top-5 right-8 flex items-center bg-black bg-opacity-70 text-white space-x-3 opacity-90 hover:opacity-80 cursor-pointer rounded-full p-1 pr-2"
       >
-        {/* <img
-          className="rounded-full w-7 h-7"
-          src={session?.user.image}
-          alt="profile pic"
-        /> */}
         <p className="text-sm">Logout</p>
         <ChevronDownIcon className="h-5 w-5" />
       </div>
@@ -98,7 +97,12 @@ const PlaylistView = ({
           className={`flex items-end space-x-7 bg-gradient-to-b to-neutral-900 ${color} h-80 text-white p-8`}
         >
           {playlistData && (
-            <img className="h-44 w-44" src={playlistData.images[0].url} />
+            // i do not want image show to the playlist
+            <img
+              className="h-44 w-44"
+              src="https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228"
+              width={400}
+            ></img>
           )}
           <div>
             <p className="text-sm font-bold">Playlist</p>

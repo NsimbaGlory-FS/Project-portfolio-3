@@ -61,6 +61,7 @@ const Song = ({
         ) : (
           <p className="w-5">{sno + 1}</p>
         )}
+
         {track?.album?.images[0]?.url && (
           <img className="h-10 w-10" src={track.album.images[0].url} />
         )}
