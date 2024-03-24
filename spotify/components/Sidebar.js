@@ -38,13 +38,19 @@ const Sidebar = ({ view, setView, setGlobalPlaylistId }) => {
   }, [session]);
   return (
     <div className="w-64 text-neutral-400 grow-0 shrink-0 h-screen overflow-y-scroll border-r border-neutral-900 p-5 text-sm hidden md:inline-flex">
-      <div className="space-y-4">
-        <div className="mt-1 mb-5">
+      <div className="space-y-5">
+        <div className="mt-0 mb-1">
           <SpotifySVG />
         </div>
+        <div className="logo">
+          <img
+            src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png"
+            alt="spotify"
+          />
+        </div>
 
-        <button className="flex items-center space-x-2 hover:text-white">
-          <HomeIcon className="h-5 w-5" />
+        <button className="flex items-center space-x-2 hover:text-white ">
+          <HomeIcon className="h-7 w-7" />
           <p>Home</p>
         </button>
         <button
@@ -53,7 +59,7 @@ const Sidebar = ({ view, setView, setGlobalPlaylistId }) => {
             view == "search" ? "text-white" : null
           }`}
         >
-          <MagnifyingGlassIcon className="h-5 w-5" />
+          <MagnifyingGlassIcon className="h-7 w-7" />
           <p>Search</p>
         </button>
         <button
@@ -62,16 +68,16 @@ const Sidebar = ({ view, setView, setGlobalPlaylistId }) => {
             view == "library" ? "text-white" : null
           }`}
         >
-          <BuildingLibraryIcon className="h-5 w-5" />
+          <BuildingLibraryIcon className="h-7 w-7" />
           <p>Your Library</p>
         </button>
         <hr className="border-black" />
         <button className="flex items-center space-x-2 hover:text-white">
-          <PlusCircleIcon className="h-5 w-5" />
+          <PlusCircleIcon className="h-7 w-7" />
           <p>Create Playlist</p>
         </button>
         <button className="flex items-center space-x-2 hover:text-white">
-          <HeartIcon className="h-5 w-5" />
+          <HeartIcon className="h-7 w-7" />
           <p>Liked Songs</p>
         </button>
         <hr className="border-neutral-900" />

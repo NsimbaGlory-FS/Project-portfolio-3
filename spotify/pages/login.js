@@ -3,15 +3,20 @@ import { signIn } from "next-auth/react";
 const Login = () => {
   return (
     <div className="w-full h-screen flex items-center justify-center">
+      <img
+        src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Black.png"
+        alt="spotify"
+        width={900}
+      ></img>
       <button
         className="text-white px-5 py-3 rounded-full bg-green-500 font-bold text-lg"
         onClick={() => signIn("spotify", { callbackUrl: "/" })}
       >
-        <img
+        {/* <img
           src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Black.png"
           alt="spotify"
           width={900}
-        ></img>
+        ></img> */}
         sign In
       </button>
     </div>

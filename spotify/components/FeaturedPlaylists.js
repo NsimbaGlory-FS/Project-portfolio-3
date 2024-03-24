@@ -26,7 +26,7 @@ const FeaturedPlaylists = ({ setView, setGlobalPlaylistId }) => {
           }
         );
         const data = await response.json();
-        setPlaylists(data.playlists.items);
+        setPlaylists(data.playlists?.items);
       }
     }
     f();
